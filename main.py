@@ -22,7 +22,7 @@ def select_image():
         if filename:
             img = Image.open(filename)
             img = ImageTk.PhotoImage(img)
-            lb1.configure(image=img, width=250, height=250)
+            lb1.configure(image=img, width=350, height=350)
             lb1.image = img
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred while selecting the image: {str(e)}")
@@ -84,10 +84,10 @@ f2 = Frame(root, width=500, height=400, bg="white", relief=GROOVE)
 f2.place(x=520, y=80)
 
 txt = Text(f2, font="arial 25 bold", width=50, height=10, relief=GROOVE, wrap=WORD)
-txt.place(x=0, y=0, width=500, height=200)
+txt.place(x=0, y=0, width=500, height=400)
 
 Scrollbar = Scrollbar(f2)
-Scrollbar.place(x=480, y=0, height=200)
+Scrollbar.place(x=480, y=0, height=400)
 Scrollbar.config(command=txt.yview)
 txt.config(yscrollcommand=Scrollbar.set)
 
